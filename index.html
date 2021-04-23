@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>alerters</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center style="margin-top: 40px;">
+        <h1>Let me introduce my family</h1>
+        <img id="img1" src="IMG_0701.JPG">
+        <button id="next" type="button" onclick="nextslide()">Next</button>
+        <p id="family">Daddy</p>
+    </center>
+</body>
+<script>
+ var images=[
+       "IMG_0701.JPG",
+       "IMG_2604.JPG",
+       "IMG_2706.JPG"
+    ]; 
+
+   var names=[
+       "Daddy",
+       "Mumma",
+       "Me"
+    ];
+
+var i=0;
+
+function nextslide(){
+    i++;
+    var no_of_family_members_in_array=3;
+    if(i>no_of_family_members_in_array) {
+        i=0;
+    }
+    var updateimg=images[i];
+    var updatename=names[i];
+    document.getElementById("img1").src=updateimg;
+    document.getElementById("family").innerHTML=updatename;
+
+}
+</script>
+</html>
